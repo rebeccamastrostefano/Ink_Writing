@@ -479,6 +479,8 @@ VAR From_dining= false
     It works, you're finally out.
     -> Out
     }
+    You need a key probably...
+    -> Bedroom
   
     
 = Out
