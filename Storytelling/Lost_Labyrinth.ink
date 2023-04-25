@@ -5,11 +5,11 @@
 
 It's night time, a thin fog is around you.
 You are on the side of the street, no one is here, the road is dark and quiet.
-"The address is right, is it?"
+You "The address is right, is it?
 You check on your phone: "Ethan: Party is at 23 Groove Street, see you there"
 You lift your face and big villa is in front of you, while a sign saying "23 Groove Street" lays on the ground.
 
-"It must be right"
+You "It must be right.
 
 * Go closer to the building to check
     -> Entrance
@@ -20,14 +20,14 @@ You lift your face and big villa is in front of you, while a sign saying "23 Gro
     You lift your phone up, go to the contacts and click on Ethan's number.
     You're about to get your phone to your ear when it suddenly turns off.
     
-    "Fuck, why didn't I charge it before coming?... So dumb"
-    "Anyway, the place must be this one..."
+    You "Fuck, why didn't I charge it before coming?... So dumb
+    You "Anyway, the place must be this one...
     
     * {not Entrance} Go closer to the building to check
     ->Entrance
     * {Entrance} Knock
     -> Knock
-    * {Entrance} {not Window} Pick through window
+    * {Entrance} {not Window} Peak through window
     -> Window
     * {Entrance} Try to open the door
     ->Enter
@@ -35,7 +35,7 @@ You lift your face and big villa is in front of you, while a sign saying "23 Gro
 = Entrance
     You start to approach the house,
     You notice it looks very old and the wood of the entrance stairs and windows seems almost... rotting.
-    "Does someone really live here?"
+    You "Does someone really live here?
     
     You proceed towards the main door,
     a shiver makes its way up your spine. It's cold, but there's something else about this place...
@@ -44,7 +44,7 @@ You lift your face and big villa is in front of you, while a sign saying "23 Gro
     
     * Knock
     -> Knock
-    * Pick through window
+    * Peak through window
     -> Window
     * Try to open door
     -> Enter
@@ -61,7 +61,7 @@ You lift your face and big villa is in front of you, while a sign saying "23 Gro
     
     + Knock again
     -> Knock
-    * {not Window} Pick through window
+    * {not Window} Peak through window
     -> Window
     * {not Dead_phone} Call your friend to be sure
     -> Dead_phone
@@ -70,11 +70,11 @@ You lift your face and big villa is in front of you, while a sign saying "23 Gro
    
  
 = Window
-    There's a window near the door, a feeble light comes out through it.
-    You get closer and pick through it.
+    There's a window near the door, a feeble light peaks through it.
+    You get closer and peak through it.
     You see a corridor, it's dark, but there are some lights here and there... you move your gaze around the hallway.
     No one is here.
-    "Maybe they are all already inside"
+    You "Maybe they are all already inside
     
     * Knock
     -> Knock
@@ -93,10 +93,11 @@ VAR Slither_sounds= false
 VAR Weapon= false
 VAR Wounded= false
 VAR Key_2= false
+VAR Grabbed_Leg= false
 You push down the door handle, and to your surprise the door is unlocked.
-The door slowly opens up, screeching louder and louder, until it's fully open.
+The door slowly opens up, screeching louder and louder, untill it's fully open.
 You go inside and a hallway stands before you, some lights slightly light up the room.
-You can see two doors at either dise of the corridor, and a bigger one right at the end in front of you.
+You can see two doors at either side of the corridor, and a bigger one right at the end in front of you.
 The door at your left is slightly open, while the two other ones stay closed shut.
 
 * Go to the door at your left
@@ -108,7 +109,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
 -> Main_Hall_Door
 
 = Corridor
-{Wounded: you move slowly, the pain on your side is atrociuos}
+{Wounded: you move slowly, the pain on your side is atrocious}
 ~ From_dining= false
     You are in the corridor, you wonder which way to go next, you need to find your friends.
     + {Library_door and not Library} Go to the door at your right again
@@ -137,15 +138,19 @@ The door at your left is slightly open, while the two other ones stay closed shu
     ->Corridor
     
 = Library_door
-{Wounded: you move slowly, the pain on your side is atrociuos}
+{Wounded: you move slowly, the pain on your side is atrocious}
     You approach the small door that stands at your right, the floor screeches under your feet.
-    {not Closed_door: While walking the door entrance behind you suddenly closes, you get startled and the smashing sound echoes around you... "Fucking Ethan, I'm gonna kill you when I find you"}
+    {
+    -not Closed_door: While walking the entrance door behind you suddenly closes, you get startled and the smashing sound echoes around you... 
+    You "Fucking Ethan, I'm gonna kill you when I find you
+    }
     ~ Closed_door= true
-    Arrived at the door you{ try to open it, and it does. | open it}
-    The room is pitch black, you can't help but imagine what could lie in the darkness, the least rational thoughts make their way in your mind, and you start to shiver.
+    Arrived at the door you {try to open it, and it does. |open it}
+    The room is pitch black, you can't help but imagine what could lie in the darkness.
+    The least rational thoughts make their way in your mind, and you start to shiver.
     A smell comes from the room, it feels... humid
 
-    {Suddenly a noise, a sharp metallic sound. It sounded like a small object hitting the ground, then rolling away. It might be something that you moved when opening the door, or maybe not... | }
+    {Suddenly a noise, a sharp metallic sound. It sounds like a small object hitting the ground, then rolling away. It might be something that you moved when opening the door, or maybe not... | }
 
     * Feel for a light switch on the side of the door
     -> Light_library
@@ -159,7 +164,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
     The lights turn on, your eyes slowly adjust to the sudden brightness.
     When you can finally see clearly again you notice that the room appears safe, even if shabby.
     
-    It's a library room, lots of old books are on the big shelves, old books, you now understand that the smell you felt was the moldy paper.
+    It's a library room, lots of old books are on the big shelves... old books, you now understand that the smell you felt was the moldy paper.
     
     No one is in here, it's just a fairly empty and small room.
     
@@ -170,8 +175,9 @@ The door at your left is slightly open, while the two other ones stay closed shu
 
 = Library  
     #LIBRARY
-    {Wounded: you move slowly, the pain on your side is atrociuos}
-    You walk inside the small room, you suddenly step on something. Looking down you see it's a bolt. It's probably what fell on the ground earlier. You feel relieved.
+    {Wounded: you move slowly, the pain on your side is atrocious}
+    You walk inside the small room, you suddenly step on something. 
+    Looking down you see it's a bolt. It's probably what fell on the ground earlier. You feel relieved.
     
     You look at the books on the shelves, they are dusty, and the smell is now annoying you.
     At some point you realize one of the books seems newer, less dusty... it definetely stands out.
@@ -183,28 +189,41 @@ The door at your left is slightly open, while the two other ones stay closed shu
     -> Corridor
     
 = Key_1
-    While you grab the book your guts feel like they are twisting inside your stomach, you irrationaly feel like something is going to happen...
+    While you grab the book your guts feel like they are twisting inside your stomach, you irrationally feel like something is going to happen...
     You look at the book cover: "Enter the unknown".
-    "That's... 
+   You "That's... 
     * Captivating
-    "That's... captivating"
+    You "That's... captivating
     * Boring
-    "That's... boring"
+    You "That's... boring
     * Scary
-    "That's... scary"
+    You "That's... scary
     
     -You then open the book, to your surprise there are no actual pages, it's more like a box, and inside there's a key.
     
     You don't really know what it opens, but you take it, then put the book back where it was.
     
-    * Keep Looking
+    * {not Grabbed_Leg} Keep Looking
+    -> Grab_Leg
+    * {Grabbed_Leg} Keep Looking
     -> Nothing_Here
     * Go out
     -> Corridor
-    
-= Nothing_Here
+
+= Grab_Leg
  You look around a little more, but there is not much else that seems interesting.
- {Suddenly something grabs your leg and you fall to the ground, you quickly look around and can only see a small shadow moving fast through the door "What the hell was that? Fucking Ethan, if this is a prank...". You get up.|...the room is quiet |"I should probably go somewhere else"}
+ Suddenly something grabs your leg and you fall to the ground
+ You quickly look around and can only see a small shadow moving fast through the door
+ You "What the hell was that? Fucking Ethan, if this is a prank... 
+ You get up.
+  ~ Grabbed_Leg= true
+ + Keep Looking
+ -> Nothing_Here
+ + Go out
+ -> Corridor
+ 
+= Nothing_Here
+ {There's nothing else that gets your attention.| ...the room is quiet | You "I should probably go somewhere else}
  + Keep Looking
  -> Nothing_Here
  + Go out
@@ -212,8 +231,11 @@ The door at your left is slightly open, while the two other ones stay closed shu
  
     
 = Main_Hall_Door
-{Wounded: you move slowly, the pain on your side is atrociuos}
-    {not Closed_door: While walking the door entrance behind you suddenly closes, you get startled and the smashing sound echoes around you... "Fucking Ethan, I'm gonna kill you when I find you"}
+{Wounded: you move slowly, the pain on your side is atrocious}
+    {
+    -not Closed_door: While walking the door entrance behind you suddenly closes, you get startled and the smashing sound echoes around you... 
+    You "Fucking Ethan, I'm gonna kill you when I find you
+    }
     ~ Closed_door= true
     {not Slither_sounds: You can hear sinister sounds around you, but you can't quite figure out their source... it sounds like something slithering slowly around, maybe water, maybe some creature?} 
     {Slither_sounds: You can still hear the slithering sounds of before, they are even louder, thinking about it makes you nauseous...}
@@ -222,7 +244,7 @@ The door at your left is slightly open, while the two other ones stay closed shu
     You arrive at the door
     * {Key_1} Try to open it
     You try to get it to open, but it's shut, you decide to use the key you found earlier and... 
-    "It works!"
+    You "It works!
     -> Main_Hall
     + {not Key_1} Try to open it
     -> Try_Open
@@ -239,8 +261,8 @@ The door at your left is slightly open, while the two other ones stay closed shu
   
 = Main_Hall 
  #MAIN HALL
- {Wounded: you move slowly, the pain on your side is atrociuos}
-    {The door creaks open, a big hall stands before you, there's a statue at the center. It looks like an angel, but its eyes are covered by a cloth... "Lady Luck! The Blindfolded Goddess! That's a nice statue" | The statue is still standing there}
+ {Wounded: you move slowly, the pain on your side is atrocious}
+    {The door creaks open, a big hall stands before you, there's a statue at the center. It looks like an angel, but its eyes are covered by a cloth... Lady Luck! The Blindfolded Goddess! That's a nice statue| The statue is still standing there}
     Two staircases stand at the side of the marble giant, you can see they curve and meet at the end, they probably lead to the same upstairs space.
     At the sides of the room you can see two doors.
     
@@ -258,8 +280,11 @@ The door at your left is slightly open, while the two other ones stay closed shu
     -> Corridor  
   
 = Living_Door
-{Wounded: you move slowly, the pain on your side is atrociuos}
-{not Closed_door: While walking the door entrance behind you suddenly closes, you get startled and the smashing sound echoes around you... "Fucking Ethan, I'm gonna kill you when I find you"}
+{Wounded: you move slowly, the pain on your side is atrocious}
+{
+-not Closed_door: While walking the door entrance behind you suddenly closes, you get startled and the smashing sound echoes around you... 
+You "Fucking Ethan, I'm gonna kill you when I find you
+}
     ~ Closed_door= true
     You approach the door that stands at your left, it's slightly open.
     From the crack you can only see darkness, but there's a feeble light that moves some shadows around. It's probably a candle.
@@ -269,19 +294,33 @@ The door at your left is slightly open, while the two other ones stay closed shu
     -> Corridor
  
 = Living
-    {You push the door open | You enter the dark room again}
+    {You push the door open | You enter the living room again}
      #LIVING ROOM
     The room is slithly lit by a few candles that hang from the walls.
-    At the center of the room there's a couch, which looks surprisingly clean and tidy, differently from the rest of the house.
-    In front of it stands a fireplace, in it some burnt wood still crackles.
-    "So it is the right place, but where did they go?"
+    {At the center of the room there's a couch, which looks surprisingly clean and tidy, differently from the rest of the house.|}
+    {In front of it stands a fireplace, in it some burnt wood still crackles.|}
+    {You "So it is the right place, but where did they go?|}
     
-    To the other side of the room there's a door, your gut twirls when looking at it... but you don't know why...
-    
-    + Go to the door
+    {
+    -not From_dining:
+    To the other side of the room there's a door, your guts twirl when looking at it... but you don't know why...
+    +{not Dining_Door1 and not Dining_Door2}Go to the door
     -> Dining_Door1
-    + Go back
+    +{Dining_Door1 or Dining_Door2}Go in the dining room
+    -> Dining_Door1
+    +Go back
     -> Corridor
+    }
+    
+    {
+    -From_dining:
+    +Go in the corridor
+    ~ From_dining= false
+    -> Corridor
+    +Go back in the dining room
+    ~ From_dining= false
+    ->Dining_Door1
+    }
     
 VAR From_Hall= false
 VAR Enter_kitchen= false
@@ -289,11 +328,12 @@ VAR From_dining= false
 = Dining_Door1
 ~ From_Hall= false
 ~ From_dining= true
-{Wounded: you move slowly, the pain on your side is atrociuos}
-    {You walk towards the door, the floor screeches under your feet, and that weird feeling in your guts gets worse at every step. Arrived in front of the door, you open it. You feel relieved when you notice the room doesn't seem to hide anything threatening. It looks like a dining room. | You are in the dining room}
+{Wounded: you move slowly, the pain on your side is atrocious}
+    {You walk towards the door, arrived there, you open it.     You feel relieved when you notice the room doesn't seem to hide anything threatening. It looks like a dining room.|You are in the dining room}
     #DINING ROOM
     There's a table in the center with six chairs around it. 
-    Like the living room the space is lit by some candles and it seems tidy and it feels like there was someone there minutes ago. Some food lies on the table, slightly eaten, but fresh.
+    {Like the living room the space is lit by some candles, it seems tidy and it feels like there was someone there minutes ago.|}
+    Some food lies on the table, slightly eaten, but fresh.
     To the other side of the room there's another door, and another one at the right.
     
     + Go to the door at the right
@@ -307,7 +347,7 @@ VAR From_dining= false
 
 = Dining_Door2
 ~ From_Hall= true
-{Wounded: you move slowly, the pain on your side is atrociuos}
+{Wounded: you move slowly, the pain on your side is atrocious}
     {Arrived in front of the door you question coming here, but it's too late now. You open the door and notice the room doesn't seem to hide anything threatening. It looks like a dining room.| You are in the dining room}
     There's a table in the center with six chairs around it.
     The space is lit by some candles and it seems tidy and it feels like there was someone there minutes ago. Some food lies on the table, slightly eaten, but fresh.
@@ -364,7 +404,7 @@ VAR From_dining= false
     You grab a candle from the dining room to look around and see it's a kitchen.
     A big key lies on a counter, you take it and leave quickly.
 ~ Key_2= true
-    "Fuck that room"
+    You "Fuck that room
 #DINING ROOM
 {
 - From_Hall:
@@ -388,14 +428,14 @@ VAR From_dining= false
     
 -> END
 = Second_Floor
-{Wounded: you move slowly, the pain on your side is atrociuos}
+{Wounded: you move slowly, the pain on your side is atrocious}
     You go up the stairs but at the end there's only a wall.
-    "Who the fuck makes stairs that lead to nothing?"
-    "This situation is only getting worse"
+    You "Who the fuck makes stairs that lead to nothing?
+    You "This situation is only getting worse
     Your leg is grabbed {Nothing_Here: again} and you fall back reaching the feet of the statue. 
     You look up quickly to see who grabbed you, nothing, just the sound of someone running away.
     You look up to the goddess.
-    "You must be kidding me"
+    You "You must be kidding me
     You heart is pumping...
     + Take a second to calm down
     -> Rest
@@ -430,7 +470,7 @@ VAR From_dining= false
 = Bedroom_Door
 {Wounded: you move slowly, the pain on your side is atrociuos}
     You approach the door.
-    "I just want to get out of here"
+    You "I just want to get out of here
     * Open the door
     -> Bedroom
     * Go back
@@ -441,7 +481,7 @@ VAR From_dining= false
 {Wounded: you move slowly, the pain on your side is atrociuos}
     {You open the door, the| The} room is quite dark, there's a lamp that slighlty lits up the place.
     It's a bedroom, a big bed is at the center of the room, it seems dusty and old, and the insects running around confirm it.
-    "Ew..."
+    You "Ew...
     There's two doors, one on the right and one on the left.
     + {not Bathroom} Open the door on the right
     -> Bathroom
@@ -470,12 +510,12 @@ VAR From_dining= false
 = Exit
     You approach the door on the left
     It looks like an exit.
-    "The back door!"
+    You "The back door!
     You try and open it but it's closed
     {
     -Key_2:
     You try to use the big key you found earlier
-    "YES!" 
+    You "YES!
     It works, you're finally out.
     -> Out
     }
