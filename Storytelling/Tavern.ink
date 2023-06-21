@@ -11,6 +11,7 @@ Jenny rushes out of the tavern. Ivor is fuming, as he gets up, he smashes the ch
 -> 1_A
 
 ===1_A===
+#forward
 A few days have passed and you never saw Jenny after that time.
 The siuation is strange, maybe Ivor did something, this must be investigated.
 
@@ -25,7 +26,7 @@ He starts to drink.
 
     * Heard you and Jenny are having some problems...
     You "I've heard you and Jenny are having some problems, is everything ok?
-    ~ Points = Points - 1
+    //~ Points = Points - 1
     -> 2_B
     *Is Jenny ok?
     You "Is Jenny ok? She hasn't come in a while...
@@ -108,7 +109,7 @@ Ivor sips the last liquor left in the glass, it's difficult to understand his em
 
 = 5_A
 {
-- Points <= 3 : ->Bad
+- Points < 3 : ->Bad
 - Points >= 3 : ->Good
 }
 
